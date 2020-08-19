@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+#header {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ccc;
+}
+
+.site-title {
+  font-size: 3.2rem;
+  background-color: palegreen;
+}
+
+.site-nav {
+  background-color: palevioletred;
+}
+
+.site-nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-link {
+  display: block;
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+}
+
+#tools {
+  display: flex;
+  height: 10vh;
+}
+
+.font-search, .custom-text { flex-grow: 3; }
+
+.font-size, .color-mode, .grid-list, .reset-tools { flex-grow: 1; }
+
+.font-search { background-color: red; }
+.custom-text { background-color: green; }
+.font-size { background-color: orange; }
+.color-mode { background-color: blue; }
+.grid-list { background-color: cyan; }
+.reset-tools { background-color: magenta; }
+
+#fonts {
+  display: grid;
+  height: 100%;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.card {
+  display: grid;
+  height: 30vh;
+  grid-template-columns: 4fr 50px;
+  grid-template-rows: 40px 4fr;
+  grid-template-areas: 
+    "title btn"
+    "txt txt";
+  background-color: gray;
+}
+
+.card-title {
+  grid-area: title;
+  background-color: pink;
+}
+
+.card-btn {
+  grid-area: btn;
+  background-color: violet;
+}
+
+.card-text {
+  grid-area: txt;
+  background-color: lightgreen;
+}
+
+#footer {
+  text-align: center;
+}
