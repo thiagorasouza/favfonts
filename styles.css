@@ -1,7 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&family=Roboto:wght@300;400;500;700&family=Alata&family=Lato&family=Montserrat&family=Open+Sans&family=Oswald&display=swap');
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 html {
@@ -14,20 +25,30 @@ body {
 }
 
 #header {
-  height: 10vh;
   display: flex;
+  height: 10vh;
+  padding: 0 3vw;
   align-items: center;
   justify-content: space-between;
-  background-color: #ccc;
+  border-bottom: 1px solid black;
+  color: #666;
+  /* background-color: #ccc; */
 }
 
 .site-title {
-  font-size: 3.2rem;
-  background-color: palegreen;
+  font: 600 2.8rem 'Manrope', sans-serif;
+  /* background-color: palegreen; */
+}
+
+.site-title .bold {
+  font-size: 2.85rem;
+  font-weight: 700; 
 }
 
 .site-nav {
-  background-color: palevioletred;
+  font: 500 1.5rem 'Roboto', sans-serif;
+  text-transform: uppercase;
+  /* background-color: palevioletred; */
 }
 
 .site-nav ul {
@@ -38,30 +59,78 @@ body {
 
 .nav-link {
   display: block;
-  padding: 0.5rem 1rem;
-  margin-right: 1rem;
+  padding: 0.5rem 1.5rem;
+  /* margin-right: 1rem; */
+}
+/* 
+.nav-link:first-of-type {padding-left: 0;}
+.nav-link:last-of-type {padding-right: 0;} */
+
+a.nav-link:link, a.nav-link:visited, a.nav-link:hover, a.nav-link:active {
+  color: #666;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 #tools {
+  height: 6vh;
+  margin: 3vh 3vw;
+  padding: 0 1vw;
+  border: 1px solid #666;
+  border-radius: 3rem;
+  /* background-color: red; */
+}
+
+#tools-form {
   display: flex;
-  height: 10vh;
+  align-items: center;
+  height: 100%;
+  font: inherit;
+}
+
+#input-font, #input-text, #select-size {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  font: 500 1.6rem 'Roboto', sans-serif;
+  border: none;
+  outline: none;
+}
+
+#input-text {
+  border-left: 1px solid #666;
+}
+
+#select-size {
+  cursor: pointer;
+}
+
+#btn-grid-list {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: url('list.png') no-repeat center/contain;
+}
+
+#btn-reset {
+  width: 1.75rem;
+  height: 1.75rem;
+  background: url('reset.png') no-repeat center/contain;
 }
 
 .font-search, .custom-text { flex-grow: 3; }
-
 .font-size, .color-mode, .grid-list, .reset-tools { flex-grow: 1; }
 
-.font-search { background-color: red; }
+/* .font-search { background-color: red; }
 .custom-text { background-color: green; }
 .font-size { background-color: orange; }
 .color-mode { background-color: blue; }
 .grid-list { background-color: cyan; }
-.reset-tools { background-color: magenta; }
+.reset-tools { background-color: magenta; } */
 
 #fonts {
   display: grid;
-  height: 100%;
-  gap: 1rem;
+  padding: 1vw 4vw;
+  gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
@@ -73,24 +142,42 @@ body {
   grid-template-areas: 
     "title btn"
     "txt txt";
-  background-color: gray;
+  /* background-color: gray; */
+  border-top: 2px solid #333;
 }
 
 .card-title {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
   grid-area: title;
-  background-color: pink;
+  /* background-color: pink; */
 }
 
 .card-btn {
   grid-area: btn;
-  background-color: violet;
+  background-image: url('add.png');
+  background-size: 2rem;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .card-text {
+  display: flex;
+  align-items: center;
   grid-area: txt;
-  background-color: lightgreen;
+  font-size: 2.8rem;
+  /* background-color: lightgreen; */
 }
 
+#roboto .card-text { font-family: 'Roboto', sans-serif; }
+#alata .card-text { font-family: 'Alata', sans-serif; }
+#open-sans .card-text { font-family: 'Open Sans', sans-serif; }
+#lato .card-text { font-family: 'Lato', sans-serif; }
+#montserrat .card-text { font-family: 'Montserrat', sans-serif; }
+#oswald .card-text { font-family: 'Oswald', sans-serif; }
+
 #footer {
+  font-size: 1.2rem;
   text-align: center;
 }

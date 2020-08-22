@@ -12,7 +12,7 @@
 <body>
 
 <header id="header">
-  <h1 class="site-title">Favorite Fonts</h1>
+  <h1 class="site-title"><span class="bold">Favorite</span> Fonts</h1>
   <nav class="site-nav">
     <ul>
       <li><a class="nav-link" href="#">Catalog</a></li>
@@ -24,12 +24,34 @@
 </header>
 
 <section id="tools">
-  <div class="font-search"></div>
-  <div class="custom-text"></div>
-  <div class="font-size"></div>
-  <div class="color-mode"></div>
-  <div class="grid-list"></div>
-  <div class="reset-tools"></div>
+  <form action="#" id="tools-form">
+    <div class="font-search">
+      <input type="search" name="font" id="input-font" placeholder="Search fonts">
+    </div>
+    <div class="custom-text">
+      <input type="text" name="text" id="input-text" placeholder="Type something">
+    </div>
+    <div class="font-size">
+      <select name="size" id="select-size">
+        <option>32px</option>
+        <option>28px</option>
+        <option>24px</option>
+        <option>20px</option>
+        <option>16px</option>
+        <option>12px</option>
+      </select>
+    </div>
+    <div class="color-mode">
+      <input type="radio" name="mode" id="bright-mode" value="bright">
+      <input type="radio" name="mode" id="dark-mode" value="dark">
+    </div>
+    <div class="grid-list">
+      <button type="button" id="btn-grid-list"></button>
+    </div>
+    <div class="reset-tools">
+      <button type="button" id="btn-reset"></button>
+    </div>
+  </form>
 </section>
 
 <main id="fonts">
@@ -66,7 +88,7 @@
 </main>
 
 <footer id="footer">
-  <p>Created by thiagorasouza</p>
+  <p>Created by @thiagorasouza</p>
 </footer>
 
 </body>
