@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&family=Roboto:wght@300;400;500;700&family=Alata&family=Lato&family=Montserrat&family=Open+Sans&family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&family=Roboto:wght@300;400;500;700&family=Alata&family=Lato&family=Montserrat&family=Open+Sans&family=Oswald&family=Fira+Sans&family=Lora&family=Merriweather&family=Dosis&display=swap');
 
 * {
   margin: 0;
@@ -13,6 +13,10 @@ button {
   color: inherit;
   background-color: transparent;
   cursor: pointer;
+  outline: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: no-repeat center/contain;
 }
 
 html {
@@ -91,13 +95,13 @@ a.nav-link:link, a.nav-link:visited, a.nav-link:hover, a.nav-link:active {
 #input-font, #input-text, #select-size {
   display: block;
   width: 100%;
-  padding: 0.5rem;
   font: 500 1.6rem 'Roboto', sans-serif;
   border: none;
   outline: none;
 }
 
 #input-text {
+  padding-left: 1rem;
   border-left: 1px solid #666;
 }
 
@@ -105,17 +109,11 @@ a.nav-link:link, a.nav-link:visited, a.nav-link:hover, a.nav-link:active {
   cursor: pointer;
 }
 
-#btn-grid-list {
-  width: 1.5rem;
-  height: 1.5rem;
-  background: url('list.png') no-repeat center/contain;
-}
-
-#btn-reset {
-  width: 1.75rem;
-  height: 1.75rem;
-  background: url('reset.png') no-repeat center/contain;
-}
+.color-mode {margin-left: 1rem;}
+#bright-mode { background-image: url('bright.png'); }
+#dark-mode { background-image: url('dark.png'); }
+#btn-grid-list { background-image: url('list.png'); }
+#btn-reset { background-image: url('reset.png'); }
 
 .font-search, .custom-text { flex-grow: 3; }
 .font-size, .color-mode, .grid-list, .reset-tools { flex-grow: 1; }
@@ -136,7 +134,7 @@ a.nav-link:link, a.nav-link:visited, a.nav-link:hover, a.nav-link:active {
 
 .card {
   display: grid;
-  height: 30vh;
+  min-height: 40vh;
   grid-template-columns: 4fr 50px;
   grid-template-rows: 40px 4fr;
   grid-template-areas: 
@@ -160,14 +158,16 @@ a.nav-link:link, a.nav-link:visited, a.nav-link:hover, a.nav-link:active {
   background-size: 2rem;
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
 }
 
 .card-text {
   display: flex;
   align-items: center;
   grid-area: txt;
-  font-size: 2.8rem;
-  /* background-color: lightgreen; */
+  padding: 1rem 0 3rem;
+  font-size: 3.2rem;
+  overflow: hidden;
 }
 
 #roboto .card-text { font-family: 'Roboto', sans-serif; }
@@ -176,8 +176,13 @@ a.nav-link:link, a.nav-link:visited, a.nav-link:hover, a.nav-link:active {
 #lato .card-text { font-family: 'Lato', sans-serif; }
 #montserrat .card-text { font-family: 'Montserrat', sans-serif; }
 #oswald .card-text { font-family: 'Oswald', sans-serif; }
+#fira-sans .card-text { font-family: 'Fira Sans', sans-serif; }
+#lora .card-text { font-family: 'Lora', serif; }
+#merriweather .card-text { font-family: 'Merriweather', sans-serif; }
+#dosis .card-text { font-family: 'Dosis', serif; }
 
 #footer {
   font-size: 1.2rem;
+  padding: 1rem 0;
   text-align: center;
 }
