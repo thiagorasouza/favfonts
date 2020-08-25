@@ -110,10 +110,10 @@ a.nav-link:link, a.nav-link:visited, a.nav-link:hover, a.nav-link:active {
 }
 
 .color-mode {margin-left: 1rem;}
-#bright-mode { background-image: url('bright.png'); }
-#dark-mode { background-image: url('dark.png'); }
-#btn-grid-list { background-image: url('list.png'); }
-#btn-reset { background-image: url('reset.png'); }
+#bright-mode { background-image: url('img/bright.png'); }
+#dark-mode { background-image: url('img/dark.png'); }
+#btn-grid-list { background-image: url('img/list.png'); }
+#btn-reset { background-image: url('img/reset.png'); }
 
 .font-search, .custom-text { flex-grow: 3; }
 .font-size, .color-mode, .grid-list, .reset-tools { flex-grow: 1; }
@@ -154,7 +154,7 @@ a.nav-link:link, a.nav-link:visited, a.nav-link:hover, a.nav-link:active {
 
 .card-btn {
   grid-area: btn;
-  background-image: url('add.png');
+  background-image: url('img/add.png');
   background-size: 2rem;
   background-repeat: no-repeat;
   background-position: center;

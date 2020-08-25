@@ -8,6 +8,7 @@ function reset() {
   cardsText.forEach(cardText => {
     cardText.textContent = defaultText;
     cardText.style = '';
+    customText.value = '';
   });
 };
 
